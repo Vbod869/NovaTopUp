@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+  <title>NovaTopup — Top Up Game Lebih Mudah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">N</span><span><b>NovaTopup</b><small>Top Up Game, Lebih Mudah!</small></span></a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Buka menu">☰</button>
+    <nav id="mainNav">
+      <a class="active" href="#beranda">⌂ Beranda</a><a href="#game">♧ Game</a><a href="#populer">▣ Top Up</a><a href="#promo">♢ Promo</a><a href="#transaksi">◷ Transaksi</a>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-btn" id="searchFocus" title="Cari game">⌕</button>
+      <button class="icon-btn" id="themeToggle" title="Ganti tema">☾</button>
+      <button class="btn btn-outline" id="loginBtn">Masuk</button>
+      <button class="btn btn-primary" id="registerBtn">Daftar</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="beranda">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="bolt">ϟ</span> TOP UP GAME FAVORITMU DI SINI!</span>
+        <h1>Top Up Game<br>Cepat, Aman & Murah<br>Hanya di <span>NovaTopup!</span></h1>
+        <p>Nikmati kemudahan top up berbagai game favoritmu dengan harga terbaik dan proses yang praktis.</p>
+        <div class="searchbar"><span>⌕</span><input id="gameSearch" type="search" placeholder="Cari game atau nominal..." aria-label="Cari game"><button id="searchBtn">Cari</button></div>
+        <div class="trust-row"><span>✓ Proses Praktis</span><span>✓ Harga Kompetitif</span><span>✓ Dukungan Pelanggan</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-art-glow"></div>
+        <div class="hero-content"><span class="promo-pill">SPECIAL PROMO</span><h2>Upgrade permainanmu</h2><p>Pilih game favorit dan temukan paket top up yang sesuai.</p><a class="btn btn-primary" href="#game">Top Up Sekarang <b>→</b></a></div>
+        <div class="hero-orb orb-one">✦</div><div class="hero-orb orb-two">✧</div><div class="hero-bottom"><span>01</span><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <section id="game" class="section">
+      <div class="section-heading"><div><span class="section-kicker">PILIH FAVORITMU</span><h2>Game Populer</h2></div><span class="muted" id="gameCount">9 game tersedia</span></div>
+      <div class="game-grid" id="gameGrid"></div>
+    </section>
+
+    <section class="shop-layout" id="populer">
+      <div class="products-panel panel">
+        <div class="section-heading compact"><div><span class="section-kicker">PAKET PILIHAN</span><h2 id="packageHeading">Top Up Populer</h2></div><select id="gameFilter" aria-label="Filter game"><option value="all">Semua Game</option></select></div>
+        <div id="productGrid" class="product-grid"></div>
+        <div id="emptyProducts" class="empty-state hidden">Game tidak ditemukan. Coba kata kunci lain.</div>
+      </div>
+      <aside class="cart-panel panel">
+        <div class="cart-title"><h2>🛒 Pesanan Saya</h2><span class="cart-count" id="cartCount">0</span></div>
+        <div id="cartItems" class="cart-items"><div class="cart-empty"><span>🛍️</span><b>Keranjang masih kosong</b><small>Pilih paket game untuk memulai.</small></div></div>
+        <div class="payment-preview">
+          <label for="paymentMethod">Metode Pembayaran</label>
+          <select id="paymentMethod"><option value="QRIS">QRIS</option><option value="DANA">DANA</option><option value="GoPay">GoPay</option><option value="OVO">OVO</option><option value="Transfer Bank">Transfer Bank</option></select>
+          <div class="payment-info"><span class="payment-logo" id="paymentLogo">QRIS</span><div><b id="paymentTitle">Pembayaran QRIS</b><small id="paymentDescription">Instruksi pembayaran ditampilkan saat checkout.</small></div></div>
+        </div>
+        <div class="totals"><div><span>Subtotal</span><b id="subtotal">Rp0</b></div><div><span>Biaya layanan</span><b id="serviceFee">Rp0</b></div><div class="total-line"><span>Total pembayaran</span><strong id="totalPrice">Rp0</strong></div></div>
+        <button class="btn btn-primary checkout-btn" id="checkoutBtn" disabled>Lanjut ke Pembayaran <span>→</span></button>
+        <p class="secure-note">♧ Data pesanan disimpan di browser ini.</p>
+      </aside>
+    </section>
+
+    <section class="promo-banner" id="promo"><div class="gift">🎁</div><div><span class="section-kicker">PROMO NOVATOPUP</span><h2>Top up makin seru, main makin puas!</h2><p>Gunakan kode <b>NOVA10</b> untuk simulasi diskon 10% pada checkout.</p></div><button class="btn btn-light" id="applyPromo">Gunakan Promo →</button></section>
+
+    <section class="bottom-grid">
+      <div class="panel why-panel"><div class="section-heading compact"><div><span class="section-kicker">KENAPA KAMI?</span><h2>Kenapa NovaTopup?</h2></div></div><div class="benefit-grid"><div><span class="benefit-icon">ϟ</span><b>Praktis</b><small>Alur pemesanan sederhana</small></div><div><span class="benefit-icon">◇</span><b>Harga Jelas</b><small>Rincian biaya transparan</small></div><div><span class="benefit-icon">♢</span><b>Data Terjaga</b><small>Jangan bagikan password game</small></div><div><span class="benefit-icon">☏</span><b>Bantuan</b><small>Riwayat pesanan mudah dicek</small></div></div></div>
+      <div class="panel transactions-panel" id="transaksi"><div class="section-heading compact"><div><span class="section-kicker">RIWAYAT LOKAL</span><h2>Transaksi Terakhir</h2></div><button class="text-btn" id="viewHistory">Lihat Semua →</button></div><div id="recentTransactions" class="transactions-list"><div class="empty-history">Belum ada pesanan di browser ini.</div></div><p class="tiny-note">Status pesanan di demo ini tidak memverifikasi pembayaran sungguhan.</p></div>
+    </section>
+  </main>
+
+  <footer><div class="footer-inner"><a class="brand" href="#"><span class="brand-mark">N</span><span><b>NovaTopup</b><small>Top Up Game, Lebih Mudah!</small></span></a><p>Demo antarmuka top up game berbasis HTML, CSS, dan JavaScript.</p><div class="footer-links"><a href="#game">Game</a><a href="#populer">Top Up</a><a href="#promo">Promo</a><a href="#transaksi">Transaksi</a></div></div><div class="copyright">© 2026 NovaTopup. Demo frontend — bukan penyedia pembayaran resmi.</div></footer>
+
+  <div class="modal-backdrop hidden" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal">
+      <button class="modal-close" data-close="checkoutModal" aria-label="Tutup">×</button>
+      <span class="section-kicker">LANGKAH TERAKHIR</span><h2 id="checkoutTitle">Detail Pemesanan</h2><p class="modal-intro">Masukkan data tujuan dengan benar. Jangan pernah memasukkan password akun game.</p>
+      <form id="checkoutForm">
+        <label for="customerName">Nama pemesan</label><input id="customerName" name="customerName" placeholder="Nama lengkap" required maxlength="70">
+        <label for="customerContact">Email atau nomor WhatsApp</label><input id="customerContact" name="customerContact" placeholder="contoh@email.com / 08xxxxxxxxxx" required maxlength="100">
+        <div class="form-two"><div><label for="gameUserId">User ID Game</label><input id="gameUserId" name="gameUserId" placeholder="Masukkan User ID" required maxlength="50"></div><div id="serverField"><label for="gameServer">Server (jika ada)</label><input id="gameServer" name="gameServer" placeholder="Contoh: 1234" maxlength="30"></div></div>
+        <label for="promoCode">Kode promo (opsional)</label><input id="promoCode" name="promoCode" placeholder="NOVA10">
+        <div class="checkout-summary" id="checkoutSummary"></div>
+        <label class="check-label"><input type="checkbox" id="agreeTerms" required> Saya memeriksa kembali detail pesanan dan memahami bahwa ini adalah demo.</label>
+        <button class="btn btn-primary full-btn" type="submit">Buat Pesanan Demo <span>→</span></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+    <div class="modal result-modal"><button class="modal-close" data-close="resultModal" aria-label="Tutup">×</button><div class="result-icon">✓</div><h2 id="resultTitle">Pesanan dibuat</h2><p id="resultMessage">Pesanan demo tersimpan di browser.</p><div class="order-code" id="orderCode"></div><div class="result-total" id="resultTotal"></div><div class="notice-box">Ini bukan bukti pembayaran. Tidak ada uang yang ditagih dan diamond/UC tidak dikirim otomatis. Untuk transaksi nyata, integrasikan payment gateway dan API supplier resmi.</div><button class="btn btn-primary full-btn" id="finishOrder">Selesai</button></div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="historyModal" role="dialog" aria-modal="true" aria-labelledby="historyTitle">
+    <div class="modal history-modal"><button class="modal-close" data-close="historyModal" aria-label="Tutup">×</button><span class="section-kicker">TERSIMPAN DI PERANGKAT INI</span><h2 id="historyTitle">Riwayat Pesanan</h2><div id="historyList" class="history-list"></div><button class="btn btn-outline full-btn" id="clearHistory">Hapus Riwayat Lokal</button></div>
+  </div>
+
+
+  <div class="demo-warning-backdrop" id="demoWarning" role="dialog" aria-modal="true" aria-labelledby="demoWarningTitle">
+    <div class="demo-warning-card">
+      <div class="demo-warning-icon">!</div>
+      <span class="section-kicker">PEMBERITAHUAN WEBSITE</span>
+      <h2 id="demoWarningTitle">Website Ini Hanya Demo</h2>
+      <h4 id="demoWarningTitle">
+        Follow Github :
+        <a href="https://github.com/Vbod869" target="_blank" rel="noopener noreferrer">
+          Click Me
+        </a>
+      </h4>
+      <p>NovaTopup ini dibuat untuk demonstrasi tampilan dan alur pemesanan. Pembayaran tidak benar-benar diproses, saldo tidak dipotong, dan diamond atau item game tidak akan dikirim.</p>
+      <div class="demo-warning-list">
+        <div><span>✓</span> Pesanan hanya tersimpan di browser ini.</div>
+        <div><span>✓</span> Harga dan status transaksi adalah contoh.</div>
+        <div><span>!</span> Jangan masukkan password atau data rahasia.</div>
+      </div>
+      <button class="btn btn-primary full-btn" id="acceptDemoWarning">Saya Mengerti, Buka Demo</button>
+      <small class="demo-warning-foot">Dengan melanjutkan, kamu memahami bahwa ini bukan layanan top up sungguhan.</small>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
